@@ -13,9 +13,22 @@ public class Customer{
     this.Order = order; 
   }
   //getters
+
+  /**
+  * Method to return a string variable 
+  * @param getName
+  * @return Name
+  * @author: S. Umaipalan
+  */
   public String getName(){
     return Name;
   }
+  /**
+  * Method to return a string variable 
+  * @param getOrder
+  * @return Order
+  * @author: S. Umaipalan
+  */
   public String getOrder(){
     return Order; 
   }

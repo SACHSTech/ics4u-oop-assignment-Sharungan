@@ -11,6 +11,13 @@ public class Drink extends Food{
     this.Type = temp;
   }
   //getter
+    
+  /**
+  * Method to return a string variable 
+  * @param getType
+  * @return Type
+  * @author: S. Umaipalan
+  */
   public String getType(){
     return Type;
   }

@@ -14,12 +14,31 @@ public class Food{
     this.Price = cost;
   }
   //getters
+
+  /**
+  * Method to return a string variable 
+  * @param getName
+  * @return Name
+  * @author: S. Umaipalan
+  */
   public String getName(){
     return Name;
   }
+  /**
+  * Method to return a int variable 
+  * @param getCalories
+  * @return Calories
+  * @author: S. Umaipalan
+  */
   public int getCalories(){
     return Calories;
   }
+  /**
+  * Method to return a double variable 
+  * @param getPrice
+  * @return Price
+  * @author: S. Umaipalan
+  */
   public double getPrice(){
     return Price;
   }

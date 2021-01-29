@@ -18,13 +18,33 @@ public class Submenu extends Menu{
     drinkMenu = new ArrayList<Drink>();
   } 
   //Adding items to my array list
+
+  /**
+  * Method to add items to array list
+  * @param newFood
+  * @return void
+  * @author: S. Umaipalan
+  */
   public void addFood(Food newFood){
       foodMenu.add(newFood);
   }
+  /**
+  * Method to add items to array list 
+  * @param newDrink
+  * @return void
+  * @author: S. Umaipalan
+  */
   public void addDrink(Drink newDrink){
     drinkMenu.add(newDrink);
   }
   //Method to return Food options
+
+  /**
+  * Method to return a string variables 
+  * @param getoptionFood
+  * @return optionFood
+  * @author: S. Umaipalan
+  */
   public String getoptionFood(){
     String optionFood = "";
     for(int i = 0; foodMenu.size() > i; i++){
@@ -33,6 +53,13 @@ public class Submenu extends Menu{
     return optionFood;
   }
   //Method to return Drink options 
+
+  /**
+  * Method to return a string variables 
+  * @param getoptionDrink
+  * @return optionDrink
+  * @author: S. Umaipalan
+  */
   public String getoptionDrink(){
     String optionDrink = "";
      for(int i = 0; drinkMenu.size() > i; i++){

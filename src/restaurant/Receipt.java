@@ -16,12 +16,31 @@ public class Receipt{
   }
 
   //Getters
+  
+  /**
+  * Method to return a int variable 
+  * @param getSubtotal
+  * @return Subtotal
+  * @author: S. Umaipalan
+  */
   public int getSubtotal(){
     return Subtotal;
   }
+  /**
+  * Method to return a int variable 
+  * @param getTax
+  * @return Tax
+  * @author: S. Umaipalan
+  */
   public int getTax(){
     return Tax;
   }
+  /**
+  * Method to return a int variable 
+  * @param getTotal
+  * @return Total
+  * @author: S. Umaipalan
+  */
   public int getTotal(){
     return Total; 
   }
