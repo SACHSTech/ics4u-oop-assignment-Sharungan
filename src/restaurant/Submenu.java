@@ -6,21 +6,25 @@ import java.util.ArrayList;
 //import Drink.java; 
 
 public class Submenu extends Menu{
+  //variables 
   private ArrayList<Food> foodMenu;
   private ArrayList<Drink> drinkMenu;
   private String sub;
 
+  //Array lists
   public Submenu(String name){
     sub = name;
     foodMenu = new ArrayList<Food>();
     drinkMenu = new ArrayList<Drink>();
   } 
+  //Adding items to my array list
   public void addFood(Food newFood){
       foodMenu.add(newFood);
   }
   public void addDrink(Drink newDrink){
     drinkMenu.add(newDrink);
   }
+  //Method to return Food options
   public String getoptionFood(){
     String optionFood = "";
     for(int i = 0; foodMenu.size() > i; i++){
@@ -28,6 +32,7 @@ public class Submenu extends Menu{
     }
     return optionFood;
   }
+  //Method to return Drink options 
   public String getoptionDrink(){
     String optionDrink = "";
      for(int i = 0; drinkMenu.size() > i; i++){
