@@ -6,7 +6,7 @@ public class Main{
   public static void main(String[] args)throws IOException{
     BufferedReader key = new BufferedReader(new InputStreamReader(System.in));
 
-    
+    //Created instances for Food and Drink
     Food english_muffin = new Food("english muffin", 250, 2.50);
     Food swedish_blueberry_soup = new Food("swedish blueberry soup", 200, 1.50); 
     Drink coffee = new Drink("coffee", 0 , 1.50, "hot");
@@ -24,6 +24,7 @@ public class Main{
     Drink halohalo = new Drink("halo halo", 153, 1.00, "cold");
     Drink peppermint_mocha_latte = new Drink("peppermint mocha latte", 120, 1.00, "hot");
 
+    //Created Submenu instances
     Submenu breakfastMenu = new Submenu("breakfastMenu");
 
     breakfastMenu.addFood(english_muffin);
@@ -47,6 +48,7 @@ public class Main{
     specialsMenu.addDrink(peppermint_mocha_latte);
     specialsMenu.addDrink(halohalo);
 
+    //Variables 
     String Response = "yes";
     String customerName;
     String readyMenu;
@@ -54,12 +56,14 @@ public class Main{
     String readyDrink; 
     String readyOrder;
     
+    //Interactions 
     while(Response.equalsIgnoreCase("yes")){
       System.out.println("Hi customer what is your name?");
       customerName = key.readLine();
       System.out.println("Would you like a menu?");
       Response = key.readLine();
       if(Response.equals ("yes")){
+        //Prints out the menu 
         System.out.println(breakfastMenu.getoptionFood());
         System.out.println(breakfastMenu.getoptionDrink());
         System.out.println(lunchMenu.getoptionFood());
@@ -72,18 +76,22 @@ public class Main{
         System.out.println("Have you decided what Menu you want? (breakfast, lunch, dinner, specials)");
         readyMenu = key.readLine();
         if(readyMenu.equalsIgnoreCase("breakfast")){
+          //Prints out breakfastMenu options 
           System.out.println(breakfastMenu.getoptionFood());
           System.out.println(breakfastMenu.getoptionDrink());
         }
         else if(readyMenu.equalsIgnoreCase("lunch")){
+          //Prints out lunchMenu options
           System.out.println(lunchMenu.getoptionFood());
           System.out.println(lunchMenu.getoptionDrink());
         }
         else if(readyMenu.equalsIgnoreCase("dinner")){
+          //Prints out dinnerMenu options 
           System.out.println(dinnerMenu.getoptionFood());
           System.out.println(dinnerMenu.getoptionDrink());
         }
         else if(readyMenu.equalsIgnoreCase("specials")){
+          //Prints out specialsMenu options 
           System.out.println(specialsMenu.getoptionFood());
           System.out.println(specialsMenu.getoptionDrink());
         }
@@ -92,6 +100,7 @@ public class Main{
         System.out.println("What would you like to drink?");
         readyDrink = key.readLine();
         readyOrder = readyFood + " and " + readyDrink;
+        //Creates a new instances for Customer
         Customer customer1 = new Customer(customerName, readyOrder);
         System.out.println(customer1.getName() + " your bill is ready");
         System.out.println("Your order is a " + readyOrder);
@@ -100,6 +109,7 @@ public class Main{
 
 
       }else{
+        //stops loop
         Response = ("no");
       }
     }
