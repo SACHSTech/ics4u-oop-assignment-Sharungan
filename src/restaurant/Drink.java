@@ -1,4 +1,5 @@
-import Food.*;
+package restaurant;
+import restaurant.*;
 
 public class Drink extends Food{
   private String Type;

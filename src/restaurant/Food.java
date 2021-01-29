@@ -1,3 +1,6 @@
+package restaurant;
+import restaurant.*;
+
 public class Food{
   private String Name;
   private int Calories;
@@ -14,7 +17,7 @@ public class Food{
   public int getCalories(){
     return Calories;
   }
-  public int getPrice(){
+  public double getPrice(){
     return Price;
   }
 }
