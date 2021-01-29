@@ -12,7 +12,4 @@ public class Drink extends Food{
   public String getType(){
     return Type;
   }
-
-
-
 }

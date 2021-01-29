@@ -22,17 +22,17 @@ public class Submenu extends Menu{
     drinkMenu.add(newDrink);
   }
   public String getoptionFood(){
-    String optionFood = " ";
+    String optionFood = "";
     for(int i = 0; foodMenu.size() > i; i++){
-      optionFood = optionFood + " " + foodMenu.get(i).getName() + "," + " " + foodMenu.get(i).getCalories() + "," + " " + foodMenu.get(i).getPrice() + ", ";
+      optionFood = optionFood + "" + foodMenu.get(i).getName() + "," + " " + foodMenu.get(i).getCalories() + " cals, $" + foodMenu.get(i).getPrice()  + "\r\n";
     }
     return optionFood;
   }
   public String getoptionDrink(){
-    String optionDrink = " ";
+    String optionDrink = "";
      for(int i = 0; drinkMenu.size() > i; i++){
 
-      optionDrink = optionDrink + " " + drinkMenu.get(i).getName() + "," + " " + drinkMenu.get(i).getCalories() + "," + " " + drinkMenu.get(i).getPrice() + " " + drinkMenu.get(i).getType() + ", ";
+      optionDrink = optionDrink + "" + drinkMenu.get(i).getName() + "," + " " + drinkMenu.get(i).getCalories() + " cals," + " $" + drinkMenu.get(i).getPrice() + ", " + drinkMenu.get(i).getType() + "\r\n";
     }
     return optionDrink;  
   }
