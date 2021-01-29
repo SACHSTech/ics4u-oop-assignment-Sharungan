@@ -4,15 +4,11 @@ import restaurant.*;
 public class Receipt{
   
   //Variables 
-  private int Subtotal;
-  private int Tax;
-  private int Total;
+  private double subtotal;
 
   //Contructor
-  public Receipt(int sub, int tax, int tot){
-    this.Subtotal = sub;
-    this.Tax = tax;
-    this.Total = tot;
+  public Receipt(double sub){
+    this.subtotal = sub;
   }
 
   //Getters
@@ -23,25 +19,26 @@ public class Receipt{
   * @return Subtotal
   * @author: S. Umaipalan
   */
-  public int getSubtotal(){
-    return Subtotal;
+  public double getsubtotal(){
+    return subtotal;
   }
   /**
   * Method to return a int variable 
-  * @param getTax
-  * @return Tax
+  * @param gettotal
+  * @return total
   * @author: S. Umaipalan
   */
-  public int getTax(){
-    return Tax;
+  public double gettotal(){
+    double total = this.subtotal * 1.13;
+    return total; 
   }
   /**
-  * Method to return a int variable 
-  * @param getTotal
-  * @return Total
+  * Method to change subtotal to string 
+  * @param toString
+  * @return String.valueOf(subtotal)
   * @author: S. Umaipalan
   */
-  public int getTotal(){
-    return Total; 
-  }
+  public String toString(){
+    return String.valueOf(subtotal);
+  }  
 }

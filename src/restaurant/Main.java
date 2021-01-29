@@ -104,9 +104,41 @@ public class Main{
         Customer customer1 = new Customer(customerName, readyOrder);
         System.out.println(customer1.getName() + " your bill is ready");
         System.out.println("Your order is a " + readyOrder);
-        Receipt receipt1 = new Receipt()
-        
 
+        //Gets the subtotal and total and prints it to screen depending on what menu you bought from and what you ordered
+        
+        if(readyMenu.equalsIgnoreCase("lunch")){
+          double priceFood = lunchMenu.getfindFood(readyFood).getPrice();
+          double priceDrink = lunchMenu.getfindDrink(readyDrink).getPrice();
+          double priceTotal = priceDrink + priceFood;
+          Receipt receipt1 = new Receipt(priceTotal);
+          System.out.println("Subtotal: $" + receipt1);
+          System.out.println("Total: $" + receipt1.gettotal());
+        }
+        else if(readyMenu.equalsIgnoreCase("breakfast")){
+          double priceFood = breakfastMenu.getfindFood(readyFood).getPrice();
+          double priceDrink = breakfastMenu.getfindDrink(readyDrink).getPrice();
+          double priceTotal = priceDrink + priceFood;
+          Receipt receipt1 = new Receipt(priceTotal);
+          System.out.println("Subtotal: $" + receipt1);
+          System.out.println("Total: $" + receipt1.gettotal());
+        }
+        else if(readyMenu.equalsIgnoreCase("dinner")){
+          double priceFood = dinnerMenu.getfindFood(readyFood).getPrice();
+          double priceDrink = dinnerMenu.getfindDrink(readyDrink).getPrice();
+          double priceTotal = priceDrink + priceFood;
+          Receipt receipt1 = new Receipt(priceTotal);
+          System.out.println("Subtotal: $" + receipt1);
+          System.out.println("Total: $" + receipt1.gettotal());
+        }
+        else if(readyMenu.equalsIgnoreCase("specials")){
+          double priceFood = specialsMenu.getfindFood(readyFood).getPrice();
+          double priceDrink = specialsMenu.getfindDrink(readyDrink).getPrice();
+          double priceTotal = priceDrink + priceFood;
+          Receipt receipt1 = new Receipt(priceTotal);
+          System.out.println("Subtotal: $" + receipt1);
+          System.out.println("Total: $" + receipt1.gettotal());
+        }
 
       }else{
         //stops loop

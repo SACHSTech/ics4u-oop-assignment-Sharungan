@@ -68,5 +68,33 @@ public class Submenu extends Menu{
     }
     return optionDrink;  
   }
+  /**
+  * Method to sort and find food object's name and return that food object 
+  * @param readyFood
+  * @return foodMenu.get(i)
+  * @author: S. Umaipalan
+  */
+  public Food getfindFood(String readyFood){
+    for(int i = 0; foodMenu.size() > i; i++){
+      if(foodMenu.get(i).getName().equals(readyFood)){
+        return foodMenu.get(i);
+      }
+    } 
+    return null;
+  }
+  /**
+  * Method to sort and find drink object's name and return that drink object 
+  * @param readyDrink
+  * @return drinkMenu.get(i)
+  * @author: S. Umaipalan
+  */
+  public Drink getfindDrink(String readyDrink){
+    for(int i = 0; drinkMenu.size() > i; i++){
+      if(drinkMenu.get(i).getName().equals(readyDrink)){
+        return drinkMenu.get(i);
+      }
+    }
+    return null;
+  }
 }
   
