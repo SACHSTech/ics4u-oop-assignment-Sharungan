@@ -1,1 +1,2 @@
 language = "java10"
+run = "javac -cp bin -d bin -sourcepath bin src/restaurant/*.java; java -cp bin restaurant.Main"
